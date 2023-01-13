@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Crear vendedor
+{% endblock %}
+
+{% block content %}
+  <h1>
+    Bienvenidos
+  </h1>
+  <h2>
+    Desde este lugar se pueden crear vendedores
+  </h2>
+
+    {% if request.method == "GET" %}
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            
+            <table>
+                {{formulario.as_table}}
+            </table>
+           
+
+
+            <input type="submit" value="Crear">
+        </form>
+    {%else%}
+        <p>Se creo correctamente</p>
+    {%endif%}
+
+
+
+
+
+
+  {% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Vendedores
+{% endblock %}
+
+{% block content %}
+  <h1>
+    Bienvenidos
+  </h1>
+  <h2>
+    Desde este lugar se pueden ver la listas de vendedores
+  </h2>
+  <a href="/cargar_vendedores/" class="btn btn-primary">Crear un nuevo producto</a>
+  {% for i in vendedores %}
+    <div class="card" style="width: 18rem;">
+        <img src="" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{i.nombre}}</h5>
+        <p class="card-text">Su nivel es {{i.nivel}}</p>
+        
+        </div>
+    </div>
+  {%endfor%}
+  {% endblock %}
